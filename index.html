@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera PFE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Capturador de Imagens</h1>
+
+    <p id="mensagem" class="mensagem" role="status">Clique em "Ligar câmera" para começar.</p>
+
+    <section class="painel">
+      <div class="area">
+        <h2>Câmera</h2>
+        <video id="video" autoplay playsinline muted></video>
+      </div>
+
+      <div class="area">
+        <h2>Imagem capturada</h2>
+        <canvas id="canvas"></canvas>
+        <p id="placeholder" class="placeholder">Nenhuma captura ainda.</p>
+      </div>
+    </section>
+
+    <section class="controles">
+      <label for="nome">Nome do aluno</label>
+      <input type="text" id="nome" placeholder="Digite seu nome" value="Aquiles Bastos">
+
+      <label for="filtro">Efeito visual</label>
+      <select id="filtro">
+        <option value="sepia(1)">Sépia</option>
+        <option value="grayscale(1)">Preto e branco</option>
+        <option value="invert(1)">Invertido</option>
+      </select>
+
+      <div class="botoes">
+        <button id="btnLigar" type="button">Ligar câmera</button>
+        <button id="btnCapturar" type="button">Capturar foto</button>
+        <button id="btnDesligar" type="button">Desligar câmera</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
